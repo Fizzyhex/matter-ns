@@ -1,3 +1,5 @@
+local RunService = game:GetService("RunService")
+
 local archetypeModule = require(script.Parent.archetype)
 local topoRuntime = require(script.Parent.topoRuntime)
 local Component = require(script.Parent.component)
@@ -8,6 +10,7 @@ local archetypeOf = archetypeModule.archetypeOf
 local areArchetypesCompatible = archetypeModule.areArchetypesCompatible
 
 local ERROR_NO_ENTITY = "Entity doesn't exist, use world:contains to check if needed"
+local SPAWN_INCREMENT = if RunService:IsClient() then 1 else -1
 
 --[=[
 	@class World
@@ -46,7 +49,7 @@ function World.new()
 		_entityArchetypeCache = {},
 
 		-- The next ID that will be assigned with World:spawn
-		_nextId = 1,
+		_nextId = SPAWN_INCREMENT,
 
 		-- The total number of active entities in the world
 		_size = 0,
@@ -153,7 +156,7 @@ function World:spawnAt(id, ...)
 	self._size += 1
 
 	if id >= self._nextId then
-		self._nextId = id + 1
+		self._nextId = id + SPAWN_INCREMENT
 	end
 
 	local components = {}
