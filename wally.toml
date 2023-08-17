@@ -1,7 +1,7 @@
 [package]
 name = "fizzyhex/matter-ns"
-description = "Fork of Matter with negative entity IDs on the server."
-version = "0.6.2"
+description = "Fork of Matter v0.6.2 with negative entity IDs on the server."
+version = "0.6.3"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 exclude = ["example", "docs", "Packages", ".moonwave", "build", "pages", "tests", "AttackOfTheKillerRoombas.rbxl", "AttackOfTheKillerRoombas.rbxl.lock", "matter.rbxl", "matter.rbxm", "roblox.toml"]
