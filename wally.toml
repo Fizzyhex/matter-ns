@@ -1,5 +1,5 @@
 [package]
-name = "evaera/matter"
+name = "fizzyhex/matter-ns"
 version = "0.6.2"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
