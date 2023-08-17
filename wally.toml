@@ -1,5 +1,6 @@
 [package]
 name = "fizzyhex/matter-ns"
+description = "Fork of Matter with negative entity IDs on the server."
 version = "0.6.2"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
